@@ -48,7 +48,7 @@ export function Contact() {
               <span>Email: rpurty582@gmail.com</span>
             </a>
             <a
-              href="https://www.linkedin.com/in/sanjay-purty"
+              href="https://www.linkedin.com/in/sanjay-purty05"
               target="_blank"
               rel="noreferrer"
               className="flex items-center gap-3 rounded-xl bg-black/5 p-4 text-slate-700 transition hover:bg-black/10 dark:bg-white/5 dark:text-slate-200 dark:hover:bg-white/10"

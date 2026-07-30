@@ -45,7 +45,7 @@ export function Projects() {
           description: repo.description || "GitHub repository project.",
           techStack: repo.language ? [repo.language] : [],
           githubLink: repo.html_url,
-          liveLink: repo.homepage || "",
+          liveLink:repo.homepage || "",
           image: `https://opengraph.githubassets.com/1/sanjay-purty/${repo.name}`,
           isGithubProject: true,
         }));

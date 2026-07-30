@@ -13,7 +13,12 @@ export function ProjectDetails() {
   useEffect(() => {
     const load = async () => {
       try {
-        setProject(await fetchProjectById(id));
+        // setProject(await fetchProjectById(id));
+         const data = await fetchProjectById(id);
+
+      console.log("Project Data:", data); // 👈 Ye line add karo
+
+      setProject(data);
       } catch {
         toast.error("Unable to load project details.");
       } finally {
