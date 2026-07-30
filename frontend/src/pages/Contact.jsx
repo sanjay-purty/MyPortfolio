@@ -2,7 +2,8 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import toast from "react-hot-toast";
-import { sendContact } from "../api/portfolioApi";
+import emailjs from "@emailjs/browser";
+// import { sendContact } from "../api/portfolioApi";
 import { Button } from "../components/Button";
 
 export function Contact() {
@@ -14,7 +15,16 @@ export function Contact() {
     e.preventDefault();
     try {
       setSending(true);
-      await sendContact(form);
+      await emailjs.send(
+       "service_6w8e1w3",
+       "template_8p5g02q",
+       {
+        name: form.name,
+        email: form.email,
+        message: form.message,
+       },
+       "q31bRBx3BYR5UUjsD"
+      );
       toast.success("Message sent successfully.");
       setForm({ name: "", email: "", message: "" });
     } catch {
